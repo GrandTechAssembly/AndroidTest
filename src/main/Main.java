@@ -2,6 +2,7 @@ package main;
 
 class HelloWorldApp {
     public static void main(String[] args) {
-        System.out.println("Hello World!"); // Display the string.
+    	String hello = "Hello World";
+        System.out.println(hello); // Display the string.
     }
 }
