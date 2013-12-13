@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LoginActivity" >
+
+    <include
+        android:id="@+id/layoutNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/navigation_menu_layout" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layoutNavigation" >
+
+        <RelativeLayout
+            android:id="@+id/mainScreenWrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/searchScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/searchTitle"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/searchSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searchScreenTitle"
+                android:layout_centerHorizontal="true"
+                android:text="@string/searchSubTitle"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/searchCompany"
+                android:layout_width="175dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/searchSubTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_view_profile_style"
+                android:inputType="textVisiblePassword"
+                android:textSize="10sp" />
+            
+            <Spinner
+                android:id="@+id/branchSpinner"
+                android:layout_width="175dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/searchCompany"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_view_profile_style" />
+            
+            <TextView
+                android:id="@+id/branchTextView1"
+                android:layout_width="175dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/searchCompany"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_view_profile_style"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp"
+                android:text="@string/spinnerTemplate"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
